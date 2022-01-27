@@ -1,5 +1,6 @@
+
 import React, { Component } from "react";
-import { Route,Routes, NavLink} from "react-router-dom";
+import { Route, Routes, NavLink } from "react-router-dom";
 import Bio from './components/Bio';
 import Contact from './components/Contact'
 
@@ -8,25 +9,35 @@ import Contact from './components/Contact'
 class Main extends Component {
   render() {
     return (
-    
-        <div>
+
+      <div>
+
         <main>
-          <h1>Simple SPA</h1>
+          <h1>Ingrid Nora Knight</h1>
           <ul className="header">
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
+
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
-          <div className="content">
-          <Routes>
-            <Route  path="/" element={<Bio/>}/>
-            
-            <Route path="/contact" element={<Contact/>} />
-          </Routes>
+
+          <div className="routes">
+
+            <Routes>
+              
+
+                  <Route path="/" element={<Bio />}
+                  />
+
+                  <Route path="/contact" element={<Contact />}
+                />
+
+            </Routes>
+
           </div>
         </main>
-        </div>
-      
+
+      </div>
+
     );
   }
 }
